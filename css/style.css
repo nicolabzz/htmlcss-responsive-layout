@@ -23,6 +23,7 @@
 
 /* nav-bar */
 .nav-top {
+    position: relative;
     background-color: #0084FD;
     height: 4.7rem;
 }
@@ -36,11 +37,32 @@
 
 .nav-top ul {
     display: none;
+    position: absolute;
+    top:4.7rem;
+    left: 0;
+    right: 0;
+    background-color: sandybrown;
+    text-align: center;
+    list-style: none;
+}
+
+.nav-top li {
+    padding: 1rem;
+    border-bottom: 1px lightgrey;
+}
+
+.nav-top .nav-link {
+    text-decoration: none;
+    color: black;
 }
 
 .nav-top .hamburger {
     color: white;
     font-size: 1.5rem;
+}
+
+.nav-top .hamburger:hover + ul {
+    display: block;
 }
 
 /* main */
@@ -77,6 +99,7 @@ main {
     border-radius: 25px;
     letter-spacing: 0.3em;
     text-decoration: none;
+    flex-shrink: 1 1 100%;
 }
 
 .card img {
@@ -229,6 +252,12 @@ main {
     gap: 2em;
 }
 
+.seiseisei {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
 .section4 h2 {
     color: white;
 }
@@ -252,10 +281,12 @@ main {
 
 .section4-card a {
     background-color: rgba(151,146,228,255);
-    padding: 10px;
+    padding: 10px 50px;
     border-radius: 25px;
     text-decoration: none;
     color: white;
+    width: fit-content;
+    letter-spacing: 5px;
 }
 
 /* section5 */
@@ -377,6 +408,114 @@ main {
 
 
 
+@media screen and (min-width: 597px) and (max-width: 810px) {
+    .section1 {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 3em 2em;
+        gap: 2em
+    }
+
+    .card1 {
+        align-items: flex-start;
+        flex: 2 1 60%;
+    }
+
+    .card {
+        /* border: 2px solid black; */
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(181,221,255,255);
+        border-radius: 25px;
+        padding: 30px 20px;
+    }
+
+    .card1 a {
+        color: white;
+        background-color: rgba(0,132,253,255);
+        padding: .5em 3em;
+        border-radius: 25px;
+        letter-spacing: 0.3em;
+        text-decoration: none;
+    }
+
+    .card img {
+        width: 60%;
+    }
+
+    .card h2 {
+        color: rgba(0,132,253,255);
+    }
+
+    .card1 {
+        gap: 1em;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        flex: 1 1 30%;
+    }
+    .card2, .card3, .card4, .card5 {
+        flex: 1 1 30%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .card2 i, .card3 i, .card4 i, .card5 i {
+        font-size: 90px;
+        color: rgba(0,132,253,255);
+    }
+
+
+
+
+    .testimonial-top p {
+        font-weight: 500;
+    }
+
+    .testimonial-card {
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+    }
+
+    .testimonial-card img {
+        width: 100%;
+        clip-path: circle();
+        margin-bottom: 20px;
+    }
+
+
+
+
+
+
+    .seiseisei {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .section4 h2 {
+        text-align: center;
+        color: white;
+    }
+
+    .section4-card {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.5em;
+        padding: 2em;
+        border-radius: 25px;
+        width: 40%;
+        flex: 1 1 30%;
+    }
 
 
 
@@ -386,22 +525,218 @@ main {
 
 
 
+    .section5 {
+        /* border: 2px solid red; */
+        background-color:  white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+        padding: 3em 2em;
+        /* gap: 2em; */
+    }
+
+    .about-us{
+        /* border: 2px solid red; */
+        gap: 2em;
+        width: 49%;
+    }
+
+    .about-us h1 {
+        color: rgba(151,146,228,255);
+    }
+
+    .about-us2 {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        width: 45%;
+    }
+
+    .about-us2 img {
+        width: 100%;
+        clip-path: circle();
+        margin-bottom: 20px;
+    }
+}
+
+
+@media screen and (min-width: 810px) {
+    main {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .section1 {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: white;
+        padding: 3em 2em;
+        gap: 2em
+    }
+
+    .card1 {
+        align-items: flex-start;
+        flex: 2 1 60%;
+    }
+
+    .card {
+        /* border: 2px solid black; */
+        display: flex;
+        flex-wrap: wrap;
+        background-color: rgba(181,221,255,255);
+        border-radius: 25px;
+        padding: 30px 20px;
+    }
+
+    .card1 a {
+        color: white;
+        background-color: rgba(0,132,253,255);
+        padding: .5em 3em;
+        border-radius: 25px;
+        letter-spacing: 0.3em;
+        text-decoration: none;
+    }
+
+    .card img {
+        width: 60%;
+    }
+
+    .card h2 {
+        color: rgba(0,132,253,255);
+    }
+
+    .card1 {
+        gap: 1em;
+        padding: 1.5rem 1.5rem 0 1.5rem;
+        flex: 1 1 30%;
+    }
+    .card2, .card3, .card4, .card5 {
+        flex: 1 1 30%;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .card2 i, .card3 i, .card4 i, .card5 i {
+        font-size: 90px;
+        color: rgba(0,132,253,255);
+    }
+
+
+
+/* section3 media */
+
+    .testimonial-top p {
+        font-weight: 500;
+    }
+
+    .testimonial-card {
+        display: flex;
+        flex-direction: row;
+        text-align: start;
+    }
+
+    .testimonial-card img {
+        width: 100%;
+        clip-path: circle();
+        margin-bottom: 20px;
+    }
 
 
 
 
-@media screen and (min-width: 811px) {
+
+/* section4 media */
+
+    .seiseisei {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .section4 h2 {
+        text-align: center;
+        color: white;
+    }
+
+    .section4-card {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 1.5em;
+        padding: 2em;
+        border-radius: 25px;
+        width: 40%;
+        flex: 1 1 30%;
+    }
+
+
+
+
+
+
+
+
+/* section5 media */
+    .section5 {
+        /* border: 2px solid red; */
+        background-color:  white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+        padding: 3em 2em;
+        /* gap: 2em; */
+    }
+
+    .about-us{
+        /* border: 2px solid red; */
+        gap: 2em;
+        width: 49%;
+    }
+
+    .about-us h1 {
+        color: rgba(151,146,228,255);
+    }
+
+    .about-us2 {
+        /* border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+        width: 45%;
+    }
+
+    .about-us2 img {
+        width: 100%;
+        clip-path: circle();
+        margin-bottom: 20px;
+    }
+
+    /* navbar */
     .nav-top ul {
+        position: static;
         display: flex;
         align-items: center;
         height: 100%;
-        list-style: none;
+        background-color: transparent;
+
     }
 
     .nav-top li {
         display: flex;
         align-items: center;
         height: 100%;
+        padding: 0;
+        border: none;
     }
 
     .nav-top .nav-link {
@@ -412,10 +747,6 @@ main {
         text-decoration: none;
         color: white;
     }
-
-    /* .nav-top .nav-link:visited {
-        color: white;
-    } */
 
     .nav-top .nav-link:hover {
         background-color: aquamarine;
@@ -434,3 +765,64 @@ main {
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+/* @media screen and (min-width: 811px) {
+    .nav-top ul {
+        position: static;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        background-color: transparent;
+
+    }
+
+    .nav-top li {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0;
+        border: none;
+    }
+
+    .nav-top .nav-link {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 1rem;
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-top .nav-link:hover {
+        background-color: aquamarine;
+    }
+
+    .nav-top .btn {
+        background-color: white;
+        padding: .5rem;
+    }
+
+    .nav-top .btn:hover {
+        background-color: lightgray;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+@media screen and (min-width:600) {
+    .features {
+        width: 100%;
+    }
+
+} */
